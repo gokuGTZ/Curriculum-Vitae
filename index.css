@@ -1,0 +1,164 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #eef1f5;
+            color: #333;
+            padding: 30px 15px;
+        }
+
+        .cv {
+            max-width: 950px;
+            margin: auto;
+            background: white;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* PANEL IZQUIERDO */
+        .sidebar {
+            background: #172b4d;
+            color: white;
+            padding: 35px 25px;
+        }
+
+        .foto {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 25px;
+        }
+
+        .sidebar h2 {
+            font-size: 19px;
+            margin: 25px 0 12px;
+            border-bottom: 2px solid #5c9ded;
+            padding-bottom: 8px;
+        }
+
+        .sidebar p, .sidebar li {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .sidebar ul {
+            padding-left: 18px;
+        }
+
+        /* PANEL DERECHO */
+        .content {
+            padding: 45px 35px;
+        }
+
+        .header {
+            border-bottom: 3px solid #5c9ded;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            color: #172b4d;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .header h3 {
+            color: #5c9ded;
+            font-weight: normal;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section h2 {
+            color: #172b4d;
+            font-size: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .section p {
+            font-size: 14px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item h3 {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .item span {
+            color: #5c9ded;
+            font-size: 13px;
+        }
+
+        /* BOTON */
+        .print {
+            display: block;
+            margin: 25px auto;
+            padding: 12px 25px;
+            background: #172b4d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .print:hover {
+            background: #5c9ded;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+            .cv {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 30px 22px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+        }
+
+        /* IMPRESION */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .cv {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .print {
+                display: none;
+            }
+
+            .sidebar {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
